@@ -36,3 +36,151 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  1% {
+    opacity: 0%;
+  }
+  49% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.spinner_green {
+  display: inline-block;
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-delay: 0.05s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinner_red {
+  display: inline-block;
+  margin-left: -25px;
+  margin-top: -2px;
+}
+
+.purchaseable {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: #EEE;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  width: calc(25vw - 22px);
+}
+
+.purchaseable:first-of-type {
+  margin-left: 0;
+}
+
+.purchaseable:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.purchaseable h1 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.purchaseable button {
+  float: right;
+}
+
+.automaticDeploys {
+  padding: 25px;
+  font-size: 24px;
+  display: inline;
+  border: 1px solid #ccc;
+}
+
+.deployButton {
+  display: inline;
+  padding: 24px;
+  margin: 24px 24px 24px 0;
+  font-size: 24px;
+  border: 1px solid #ddd;
+}
+
+button { display: inline }
+
+.achievement {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #CCC;
+  background: #eee;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.achievement + .achievement {
+  margin-left: 8px;
+}
+
+.achievement_tooltip {
+  display: none;
+}
+
+@keyframes hover {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.achievement:hover .achievement_tooltip {
+  display: block;
+  position: relative;
+  width: 250px;
+  border: 1px solid #ccc;
+  background: #eee;
+  padding: 0 24px;
+  bottom: 128px;
+  margin-left: -1px;
+  animation-name: hover;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  z-index: 10;
+}
+
+.achievement h1 {
+  font-size: 18px;
+}
+
+.achievement p {
+  font-size: 12px;
+}
+
+.achievement .icon {
+  display: flex;
+  padding: 0 4px;
+  font-size: 40px;
+}
+
+.profitLastBuild {
+  color: green;
+  animation-name: hover;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  display: inline-block;
+}
