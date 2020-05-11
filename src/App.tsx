@@ -61,7 +61,7 @@ class App extends React.Component<AppProps, AppState> {
 
       this.setState = this.setState.bind(this);
 
-      setInterval(() => this.runChecks(), 3000);
+      setInterval(() => this.runChecks(), 200);
   };
 
   runChecks = () => {
@@ -145,12 +145,8 @@ class App extends React.Component<AppProps, AppState> {
           <div>Build Count: {this.state.builds}</div>
           <div>Bank Account: {getBank(this.state)}</div>
         </div>
-        <div className="purchaseables">
-          {displayPurchaseables(this.state, this.setState)}
-        </div>
-        <div className="achievements">
-          {displayAchievements(this.state)}
-        </div>
+        {displayPurchaseables(this.state, this.setState)}
+        {displayAchievements(this.state)}
     </div>
   );
 }

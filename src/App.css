@@ -13,6 +13,11 @@
   }
 }
 
+.gameContainer {
+  padding: 24px;
+  min-width: 100vw;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -71,22 +76,27 @@
   margin-top: -2px;
 }
 
+.purchaseables, .achievements {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .purchaseable {
   border: 1px solid #ccc;
   border-radius: 2px;
   background: #EEE;
-  margin: 20px;
-  padding: 20px;
+  margin: 24px 0;
+  padding: 24px;
   display: inline-block;
-  width: calc(25vw - 22px);
+  width: calc(25vw - 80px);
 }
 
-.purchaseable:first-of-type {
+.purchaseable + .purchaseable {
+  margin-left: 24px;
+}
+
+.purchaseable:nth-of-type(0n+5) {
   margin-left: 0;
-}
-
-.purchaseable:nth-of-type(3) {
-  margin-right: 0;
 }
 
 .purchaseable h1 {

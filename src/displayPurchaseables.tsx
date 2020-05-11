@@ -8,7 +8,7 @@ import { handlePurchase, handleSale } from './handlers';
 type SetState = (state: any) => void;
 
 const displayPurchaseables = (state: AppState, setState: SetState) => (
-    <div>
+    <div className="purchaseables">
       {state.devPurchaseables.map((purchaseable: DevPurchaseable) => {
         if (!purchaseable.visible) {
           return null;

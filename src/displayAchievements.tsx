@@ -5,7 +5,7 @@ import { Achievement }  from './achievements';
 type SetState = (state: any) => void;
 
 const displayAchievements = (state: AppState) => (
-    <div style={{"display": "flex"}}>
+    <div className="achievements">
       {state.achievements.map((achievement: Achievement) => {
         if (!achievement.visible) {
           return null;
